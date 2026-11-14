@@ -89,7 +89,7 @@ Consistent use of skill prefixes help humans quickly identify the skill we want 
 
 ## Review Types
 
-Each review skill is broken down into separate review procedures that differ in how thorough they are, such as light, heavy, and extensive. This package ships a light and a heavy procedure for each review skill.
+Each review skill is broken down into separate review procedures that differ in how thorough they are, such as light, heavy, and extensive.
 
 - **Light**: The agent checks its own work against the standards in one pass. Each review skill runs this procedure unless you ask for another.
 - **Heavy**: The agent starts a separate reviewer subagent for each rule, so it costs far more than a light review.
