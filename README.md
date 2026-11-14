@@ -1,9 +1,52 @@
 # tiagox-agent-config
 
-A set of high level Claude Code skills I use to write structured and consistent agent instructions.
+A set of high level Claude Code skills to write structured and consistent agent instructions.
+
+This README follows the [Standard Readme](https://github.com/RichardLitt/standard-readme) specification.
+
+## Install
+
+Install the package as a plugin from the [tiagox-claude-code-mods](https://github.com/ninjaboynaru/tiagox-claude-code-mods) marketplace:
+
+```sh
+claude plugin marketplace add ninjaboynaru/tiagox-claude-code-mods
+claude plugin install tiagox-agent-config@tiagox-claude-code-mods
+```
+
+Or copy the folders under `skills/` into the `.claude/skills/` folder of your project, or into `~/.claude/skills/` to make them available in every project.
+
+```sh
+git clone https://github.com/ninjaboynaru/tiagox-agent-config.git
+cp -r tiagox-agent-config/skills/* ~/.claude/skills/
+```
+
+The skills cite each other by name, so keep the folder names as they are or change them uniformly.
+
+### Dependencies
+
+`author-skills` and `sop-skill-review` depend on Anthropic's `skill-creator` skill, which is not in this package. Install it by following the directions at [anthropics/skills](https://github.com/anthropics/skills).
+
+## Usage
+
+Invoke a skill in Claude Code by its name:
+
+```text
+/sop-code-review
+```
+
+### Write Your Own Standards
+
+1. Load `author-standards` and ask Claude to create a standards skill for your subject or add a standards section to an existing skill or document.
+2. Add rules over time as you discover them or create all your rules at once if you know them all now.
+	- Ensure every rule adheres to the `author-standards` skill and has good and bad examples, and clauses.
+3. Optionally, create an `sop-review` like skill for your new standards by copying `sop-code-review` or `sop-writing-review` and modifying them to your use case.
 
 ## Content Types
 
+This package defines five types of content for agent configuration:
+
+- **Skill**: A set of instructions or guidance to give agents specialized knowledge and abilities.
+	- Every other content type ships in this package as a skill or as a section of one.
 - **Standard**: A catalog of rules that a category of work, such as code or writing, must adhere to.
 	- Steers agents to perform a type of work in accordance with those rules.
 - **SOP**: A standard operating procedure, which is a fixed set of numbered steps an agent follows to reach a specific goal.
@@ -51,21 +94,8 @@ Each review skill is broken down into separate review procedures that differ in 
 - **Light**: The agent checks its own work against the standards in one pass. Each review skill runs this procedure unless you ask for another.
 - **Heavy**: The agent starts a separate reviewer subagent for each rule, so it costs far more than a light review.
 
-## Install
-
-Copy the folders under `skills/` into the `.claude/skills/` folder of your project, or into `~/.claude/skills/` to make them available in every project.
-
-The skills cite each other by name, so keep the folder names as they are or change them uniformly.
-
-## Write Your Own Standards
-
-1. Load `author-standards` and ask Claude to create a standards skill for your subject or add a standards section to an existing skill or document.
-2. Add rules over time as you discover them or create all your rules at once if you know them all now.
-	- Ensure every rule adheres to the `author-standards` skill and has good and bad examples, and clauses.
-3. Optionally, create an `sop-review` like skill for your new standards by copying `sop-code-review` or `sop-writing-review` and modifying them to your use case.
-
 ## License
 
-The package is licensed under the MIT License (see `LICENSE`).
+[MIT](LICENSE) © Thiago Pereira
 
 The `author-sop` skill is adapted from the `agent-sop-author` skill in [strands-agents/agent-sop](https://github.com/strands-agents/agent-sop), which is licensed under the Apache License 2.0. That folder keeps the Apache license and the original copyright notice (see `skills/author-sop/LICENSE` and `skills/author-sop/NOTICE`).

@@ -1,6 +1,6 @@
 {
 	"name": "tiagox-agent-config",
-	"description": "Standards, procedures, and authoring skills that give AI agent instructions a fixed structure.",
+	"description": "A set of high level Claude Code skills to write structured and consistent agent instructions.",
 	"author": {
 		"name": "Thiago Pereira"
 	},
