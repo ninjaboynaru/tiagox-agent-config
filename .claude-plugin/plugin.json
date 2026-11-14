@@ -1,0 +1,9 @@
+{
+	"name": "tiagox-agent-config",
+	"description": "Standards, procedures, and authoring skills that give AI agent instructions a fixed structure.",
+	"author": {
+		"name": "Thiago Pereira"
+	},
+	"license": "MIT",
+	"keywords": ["standards", "sop", "ontology", "code-review", "writing-review", "agent-config"]
+}

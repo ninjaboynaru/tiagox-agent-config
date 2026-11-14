@@ -1,0 +1,13 @@
+{
+	"name": "tiagox",
+	"owner": {
+		"name": "Thiago Pereira"
+	},
+	"plugins": [
+		{
+			"name": "tiagox-agent-config",
+			"source": "./",
+			"description": "Standards, procedures, and authoring skills that give AI agent config a fixed structure."
+		}
+	]
+}
