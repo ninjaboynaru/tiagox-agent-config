@@ -1,6 +1,6 @@
 ---
 name: standards-writing
-description: 'List of standards for technical writing, prose writing, and communication with humans, which means messages to the user and messages or emails to other people. The standards cover writing that reads like quality natural human writing free of AI slop, and writing in a concise, plain-language, to-the-point style. Use this skill before writing or editing any prose, note, log, document, message, email, or response. Also use it whenever the user asks for writing or responses that are concise, to the point, simple, in plain English, or free of jargon, nonsense, verbosity, or pointless detail, and when the user says a response was too long, too verbose, or confusing, even if they only say "shorter", "simpler", or "get to the point".'
+description: 'Standards for technical writing, prose, and messages to the user or to other people, so that writing reads like natural human writing, free of AI slop, in a concise, plain-language style. Use this skill before writing or editing any prose, note, log, document, message, email, or response. Also use it when the user asks for writing that is concise, simple, or free of jargon, or says a response was too long or confusing, even if they only say "shorter" or "simpler".'
 metadata:
   license: MIT
   package: tiagox-agent-config
